@@ -1,0 +1,11 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# https://www.playframework.com/documentation/latest/ScalaRouting
+# ~~~~
+
+GET     /todo                       controllers.TodoListController.getAll
+GET     /todo/:itemId               controllers.TodoListController.getById(itemId: Long)
+
+POST    /todo                       controllers.TodoListController.addNewItem
+PUT     /todo/done/:itemId          controllers.TodoListController.markAsDone(itemId: Long)
+DELETE  /todo/done                  controllers.TodoListController.deleteAllDone
